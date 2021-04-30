@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class Header extends BasePage {
@@ -46,6 +47,9 @@ public class Header extends BasePage {
     private static final String JOBS_LINK = "//div[@class='headerNewNN']//a[contains(text(),'Jobs')]";
     private static final String LOGIN_LINK = "//div[@class='headerNewNN']//a[contains(text(),'Log In')]";
     private static final String REQUEST_BUTTON = "//a[contains(text(),'Request Access')]";
+    private static final String PROFILE_LINK = "//div[@class='headerNewNN']//a[@id='dropdownMenuModels']";
+    private static final String DASHBOARD_LINK = "//div[@class='headerNewNN']//a[contains(text(),'Dashboard')]";
+    private static final String LOGOUT_LINK = "//div[@class='headerNewNN']//a[contains(text(),'Log out')]";
 
     @FindBy(css=HOME_LINK)
     private WebElement homeLink;
@@ -274,4 +278,200 @@ public class Header extends BasePage {
     public WebElement getRequestButton() {
         return requestButton;
     }
+
+    @FindBy (xpath=PROFILE_LINK)
+    private WebElement profileLink;
+    public WebElement getProfileLink() {
+        return profileLink;
+    }
+
+    @FindBy (xpath=DASHBOARD_LINK)
+    private WebElement dashboardLink;
+    public WebElement getDashboardLink() {
+        return dashboardLink;
+    }
+
+    @FindBy (xpath=LOGOUT_LINK)
+    private WebElement logoutLink;
+    public WebElement getLogoutLink() {
+        return logoutLink;
+    }
+
+    public AIOperationsPages openAIForITOperationsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getAiforitOperationsLink()).click().build().perform();
+        return new AIOperationsPages(driver);
+        }
+
+    public void openCloudSpendAlertsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getCloudAlertLink()).click().build().perform();
+    }
+
+    public void openEarlyIncidentDetectionLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getEarlyDetectionLink()).click().build().perform();
+    }
+
+    public void openPredictiveMaintenanceLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getPredictiveMaintenanceLink()).click().build().perform();
+    }
+
+    public FraudAndSecurity openFraudSecurityLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getFraudSecurityLink()).click().build().perform();
+        return new FraudAndSecurity(driver);
+    }
+
+    public void openAccountTakeoverDefenseLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getAccountTakeoverLink()).click().build().perform();
+    }
+
+    public void openTransactionCardFraudLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getTransactionCardLink()).click().build().perform();
+    }
+
+    public void openIntelligentThreatDetectionLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getIntelligentDetectionLink()).click().build().perform();
+    }
+
+    public ForecastingPlanningPages openForecastingPlanningLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getForecastingPlanningLink()).click().build().perform();
+        return new ForecastingPlanningPages(driver);
+    }
+
+    public void openDemandForecastingLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getDemandForecastingPLink()).click().build().perform();
+    }
+
+    public void openRealTimeForecastingLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getRealForecastingPLink()).click().build().perform();
+    }
+
+    public void openFinancialMetricsForecastingLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getFinancialForecastingPLink()).click().build().perform();
+    }
+
+    public void openPredictiveModelingLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getPredictiveModelingLink()).click().build().perform();
+    }
+
+    public void openMarketingSalesAILink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getMarketingSalesLink()).click().build().perform();
+    }
+
+    public void openPredictiveLeadScoringLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getPredictiveLeadLink()).click().build().perform();
+    }
+
+    public void openPersonalizedPromotionsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getPersonalizedPromotionsLink()).click().build().perform();
+    }
+
+    public void openCustomerChurnPredictionLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getCustomerPredictionLink()).click().build().perform();
+    }
+
+    public void openSalesRevenueForecastingLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getSalesForecastingPLink()).click().build().perform();
+    }
+
+    public void openRecommenderAILink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getRecommenderLink()).click().build().perform();
+    }
+
+    public void openPersonalizedRecommendationsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getPersonalizedRecommendationsLink()).click().build().perform();
+    }
+
+    public void openRelatedItemsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getRelatedItemsLink()).click().build().perform();
+    }
+
+    public void openPersonalizedSearchLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getPersonalizedSearchLink()).click().build().perform();
+    }
+
+    public void openRealTimeFeedRecommendationsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getRealRecommendationsLink()).click().build().perform();
+    }
+
+    public void openAnomalyDetectionLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getAnomalyDetectionLink()).click().build().perform();
+    }
+
+    public void openTimeseriesAnomalyDetectionLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getTimeAnomalyDetectionLink()).click().build().perform();
+    }
+
+    public void openEventStreamAnomalyDetectionLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getSolutionsLink()).moveToElement(getEventAnomalyDetectionLink()).click().build().perform();
+    }
+
+    public void openDeconstructedLink(){
+        waitForElementToAppear(getDeconstructedLink());
+        getDeconstructedLink().click(); }
+
+    public void openResearchLink(){
+        waitForElementToAppear(getResearchLink());
+        getResearchLink().click(); }
+
+    public void openAboutLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getCompanyLink()).moveToElement(getAboutLink()).click().build().perform();
+    }
+
+    public void openCultureLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getCompanyLink()).moveToElement(getCultureLink()).click().build().perform();
+    }
+
+    public void openPressLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getCompanyLink()).moveToElement(getPressLink()).click().build().perform();
+    }
+
+    public void openSocialMediaLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getCompanyLink()).moveToElement(getSocialLink()).click().build().perform();
+    }
+
+    public void openJobsLink(){
+        Actions action = new Actions(driver);
+        action.moveToElement(getCompanyLink()).moveToElement(getJobsLink()).click().build().perform();
+    }
+
+    public void openLoginLink(){
+        waitForElementToAppear(getLoginLink());
+        getLoginLink().click(); }
+
+    public void openLogoutLink(){
+        waitForElementToAppear(getLogoutLink());
+        getLogoutLink().click(); }
+
+    public void openHomeLink(){
+        waitForElementToAppear(getHomeLink());
+        getHomeLink().click(); }
 }

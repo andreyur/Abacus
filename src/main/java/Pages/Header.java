@@ -360,14 +360,16 @@ public class Header extends BasePage {
         action.moveToElement(getSolutionsLink()).moveToElement(getFinancialForecastingPLink()).click().build().perform();
     }
 
-    public void openPredictiveModelingLink(){
+    public PredictiveModelingPage openPredictiveModelingLink(){
         Actions action = new Actions(driver);
         action.moveToElement(getSolutionsLink()).moveToElement(getPredictiveModelingLink()).click().build().perform();
+        return new PredictiveModelingPage(driver);
     }
 
-    public void openMarketingSalesAILink(){
+    public MarketingSalesPages openMarketingSalesAILink(){
         Actions action = new Actions(driver);
         action.moveToElement(getSolutionsLink()).moveToElement(getMarketingSalesLink()).click().build().perform();
+        return new MarketingSalesPages(driver);
     }
 
     public void openPredictiveLeadScoringLink(){
@@ -390,9 +392,10 @@ public class Header extends BasePage {
         action.moveToElement(getSolutionsLink()).moveToElement(getSalesForecastingPLink()).click().build().perform();
     }
 
-    public void openRecommenderAILink(){
+    public RecommenderAIPages openRecommenderAILink(){
         Actions action = new Actions(driver);
         action.moveToElement(getSolutionsLink()).moveToElement(getRecommenderLink()).click().build().perform();
+        return new RecommenderAIPages(driver);
     }
 
     public void openPersonalizedRecommendationsLink(){
@@ -415,19 +418,22 @@ public class Header extends BasePage {
         action.moveToElement(getSolutionsLink()).moveToElement(getRealRecommendationsLink()).click().build().perform();
     }
 
-    public void openAnomalyDetectionLink(){
+    public AnomalyDetectionPages openAnomalyDetectionLink(){
         Actions action = new Actions(driver);
         action.moveToElement(getSolutionsLink()).moveToElement(getAnomalyDetectionLink()).click().build().perform();
+        return new AnomalyDetectionPages(driver);
     }
 
-    public void openTimeseriesAnomalyDetectionLink(){
+    public AnomalyDetectionPages openTimeseriesAnomalyDetectionLink(){
         Actions action = new Actions(driver);
         action.moveToElement(getSolutionsLink()).moveToElement(getTimeAnomalyDetectionLink()).click().build().perform();
+        return new AnomalyDetectionPages(driver);
     }
 
-    public void openEventStreamAnomalyDetectionLink(){
+    public AnomalyDetectionPages openEventStreamAnomalyDetectionLink(){
         Actions action = new Actions(driver);
         action.moveToElement(getSolutionsLink()).moveToElement(getEventAnomalyDetectionLink()).click().build().perform();
+        return new AnomalyDetectionPages(driver);
     }
 
     public void openDeconstructedLink(){

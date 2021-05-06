@@ -17,6 +17,10 @@ public class FirstTest  {
     AIOperationsPages aiOperationsPages;
     FraudAndSecurity fraudAndSecurity;
     ForecastingPlanningPages forecastingPlanningPages;
+    PredictiveModelingPage predictiveModelingPage;
+    MarketingSalesPages marketingSalesPages;
+    RecommenderAIPages recommenderAIPages;
+    AnomalyDetectionPages anomalyDetectionPages;
     RequestSchedule rs;
 @BeforeSuite
 public void setUp() throws IOException {
@@ -107,6 +111,102 @@ public void setUp() throws IOException {
                 rs.checkRequestAndScheduleButtons();
                 forecastingPlanningPages.clickPlayButtons();
                 forecastingPlanningPages.clickBackButton();
+                Thread.sleep(500);
+                header.openHomeLink();
+                predictiveModelingPage = header.openPredictiveModelingLink();
+                predictiveModelingPage.checkPredictiveModeling();
+                rs.checkRequestAndScheduleButtons();
+                predictiveModelingPage.clickPlayButtons();
+                predictiveModelingPage.checkPressLink();
+                Thread.sleep(500);
+                header.openHomeLink();
+        }
+
+        @Test
+        public void forthTest() throws IOException, InterruptedException {
+                Thread.sleep(500);
+                marketingSalesPages = header.openMarketingSalesAILink();
+                Thread.sleep(500);
+                marketingSalesPages.checkMarketingSalesAI();
+                rs.checkRequestAndScheduleButtons();
+                marketingSalesPages.clickPlayButtons();
+                marketingSalesPages.checkPressLink();
+                marketingSalesPages.clickPredictiveLeadLink();
+                marketingSalesPages.checkPredictiveLeadScoring();
+                rs.checkRequestAndScheduleButtons();
+                marketingSalesPages.clickPlayButtons();
+                marketingSalesPages.clickBackButton();
+                marketingSalesPages.clickPersonalizedPromotionsLink();
+                marketingSalesPages.checkPersonalizedPromotions();
+                rs.checkRequestAndScheduleButtons();
+                marketingSalesPages.clickPlayButtons();
+                marketingSalesPages.clickBackButton();
+                marketingSalesPages.clickCustomerPredictionLink();
+                marketingSalesPages.checkCustomerChurnPrediction();
+                rs.checkRequestAndScheduleButtons();
+                marketingSalesPages.clickPlayButtons();
+                marketingSalesPages.clickBackButton();
+                marketingSalesPages.clickSalesForecastingPLink();
+                marketingSalesPages.checkSalesRevenueForecasting();
+                rs.checkRequestAndScheduleButtons();
+                marketingSalesPages.clickPlayButtons();
+                marketingSalesPages.clickBackButton();
+                Thread.sleep(500);
+                header.openHomeLink();
+        }
+
+        @Test
+        public void fifthTest() throws IOException, InterruptedException {
+                Thread.sleep(500);
+                recommenderAIPages = header.openRecommenderAILink();
+                Thread.sleep(500);
+                recommenderAIPages.checkRecommenderAI();
+                rs.checkRequestAndScheduleButtons();
+                recommenderAIPages.clickPlayButtons();
+                recommenderAIPages.checkPressLink();
+                recommenderAIPages.clickPersonalizedRecommendationsLink();
+                recommenderAIPages.checkPersonalizedRecommendations();
+                rs.checkRequestAndScheduleButtons();
+                recommenderAIPages.clickPlayButtons();
+                recommenderAIPages.clickBackButton();
+                recommenderAIPages.clickRelatedItemsLink();
+                recommenderAIPages.checkRelatedItems();
+                rs.checkRequestAndScheduleButtons();
+                recommenderAIPages.clickPlayButtons();
+                recommenderAIPages.clickBackButton();
+                recommenderAIPages.clickPersonalizedSearchLink();
+                recommenderAIPages.checkPersonalizedSearch();
+                rs.checkRequestAndScheduleButtons();
+                recommenderAIPages.clickPlayButtons();
+                recommenderAIPages.clickBackButton();
+                recommenderAIPages.clickRealTimeFeedRecommendationsLink();
+                recommenderAIPages.checkRealTimeFeedRecommendations();
+                rs.checkRequestAndScheduleButtons();
+                recommenderAIPages.clickPlayButtons();
+                recommenderAIPages.clickBackButton();
+                Thread.sleep(500);
+                header.openHomeLink();
+        }
+
+        @Test
+        public void sixthTest() throws IOException, InterruptedException {
+                Thread.sleep(500);
+                anomalyDetectionPages = header.openAnomalyDetectionLink();
+                Thread.sleep(500);
+                anomalyDetectionPages.checkAnomalyDetection();
+                rs.checkRequestAndScheduleButtons();
+                anomalyDetectionPages.clickPlayButtons();
+                anomalyDetectionPages.checkPressLink();
+                anomalyDetectionPages.clickTimeseriesAnomalyDetectionLink();
+                anomalyDetectionPages.checkTimeseriesAnomalyDetection();
+                rs.checkRequestAndScheduleButtons();
+                anomalyDetectionPages.clickPlayButtons();
+                anomalyDetectionPages.clickBackButton();
+                anomalyDetectionPages.clickEventStreamAnomalyDetectionLink();
+                anomalyDetectionPages.checkEventStreamAnomalyDetection();
+                rs.checkRequestAndScheduleButtons();
+                anomalyDetectionPages.clickPlayButtons();
+                anomalyDetectionPages.clickBackButton();
                 Thread.sleep(500);
                 header.openHomeLink();
         }

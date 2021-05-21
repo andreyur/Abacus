@@ -17,7 +17,7 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BasePage {
-    public static final String BASE_URL="https://preprod.abacus.ai/";
+    public static final String BASE_URL="https://abacus.ai/";
     public static final String TEST_USER="lushpigana@gmail.com";
     public static final String TEST_PASS="iiiiii12";
 
